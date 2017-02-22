@@ -1,6 +1,6 @@
 {
   "name": "visual-compare",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "visual compare helper / 视觉还原度对比工具",
   "main": "build/index.js",
   "scripts": {

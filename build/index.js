@@ -10782,6 +10782,11 @@ var env = __webpack_require__(3);
  */
 function Index() {
 
+    if ($('body').find('.J_VisualCompareWrapper').length) {
+        console.log('[视觉还原对比工具 visual-compare 的提示]您只需要引入资源即可使用，不需要执行函数。');
+        return;
+    }
+
     var localConfig = JSON.parse(localStorage.getItem(env.localStorage.configName)) || {};
 
     $('body').append('<div class="visual-compare-wrapper J_VisualCompareWrapper"></div>');
@@ -10831,6 +10836,7 @@ function Index() {
 $.extend(Index.prototype, {
 
     init: function () {
+
         this.img = new Img(this.config);
         this.crossLine = new CrossLine(this.config);
         this.panel = new Panel(this.config, this.img);
@@ -11504,10 +11510,12 @@ if(false) {
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
+var $ = __webpack_require__(0);
 var Index = __webpack_require__(5);
 
-new Index();
+$(function () {
+    new Index();
+});
 
 module.exports = Index;
 

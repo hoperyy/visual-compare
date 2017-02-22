@@ -1,86 +1,4 @@
-
-# (English DOC) Tools for Visual Compare
-
-## github
-https://github.com/liuyuanyangscript/visual-compare
-
-## issues
-https://github.com/liuyuanyangscript/visual-compare/issues
-
-## Who is using ?
-
-+   Front-End engineer
-+   UEDer
-
-## When to use ?
-
-+   for Front-End engineer
-
-    +   When coding...
-    +   Before showing pages to UEDer...
-
-+   for UEDer
-
-    +   When comparing pages written by FEer with designed pictures.
-
-## Quick Start
-
-Visual-Compare supports UMD.
-
-+   local
-
-    in terminal
-
-    ```
-    $ npm install
-    $ npm run build
-    ```
-
-    in js
-
-    ```
-    import VisualCompare from './build/index'
-
-    new VisualCompare()
-    ```
-
-+   npm
-
-    in terminal
-
-    ```
-    $ npm install visual-compare --save
-    ```
-
-    in js
-
-    ```
-    import VisualCompare from 'visual-compare'
-
-    new VisualCompare()
-    ```
-
-+   `<script src="xxx">`
-
-    in html
-
-    ```
-    <script src="build/visual-compare.js"></script>
-    ```
-
-    in js
-
-    ```
-    new window.VisualCompare()
-    ```
-
-## rules
-
-The input of `img src` should be an online img address, such as `https://img.alicdn.com/tps/TB1gx13PFXXXXXFXXXXXXXXXXXX-1130-500.jpg_q100.jpg_.webp`
-
-
 #（中文文档）视觉稿还原度对比工具
-
 
 ## github
 https://github.com/liuyuanyangscript/visual-compare
@@ -105,9 +23,9 @@ https://github.com/liuyuanyangscript/visual-compare/issues
 
     视觉设计师、交互设计师可以将页面和视觉稿进行对比，发现细微差别。
 
-## 快速开始
+## 如何使用
 
-Visual-Compare 支持 UMD 规范.
+您只需要引入该资源到页面上即可，它会自动运行。
 
 +   本地使用
 
@@ -121,9 +39,7 @@ Visual-Compare 支持 UMD 规范.
     js
 
     ```
-    import VisualCompare from './build/index'
-
-    new VisualCompare()
+    import './build/index'
     ```
 
 +   npm
@@ -138,24 +54,84 @@ Visual-Compare 支持 UMD 规范.
 
     ```
     import VisualCompare from 'visual-compare'
-
-    new VisualCompare()
     ```
 
 +   `<script>` 引用
-
-    html
 
     ```
     <script src="build/visual-compare.js"></script>
     ```
 
-    js
-
-    ```
-    new window.VisualCompare()
-    ```
-
 ## 规则
 
 呈现在页面右下角的设置栏里的 `img src` 处，需要填写线上的视觉稿地址，如 `https://img.alicdn.com/tps/TB1gx13PFXXXXXFXXXXXXXXXXXX-1130-500.jpg_q100.jpg_.webp`。
+
+<br/><br/>
+# (English DOC) Tools for Visual Compare
+
+## github
+https://github.com/liuyuanyangscript/visual-compare
+
+## issues
+https://github.com/liuyuanyangscript/visual-compare/issues
+
+## Who is using ?
+
++   Front-End engineer
++   UEDer
+
+## When to use ?
+
++   for Front-End engineer
+
+    +   When coding...
+    +   Before showing pages to UEDer...
+
++   for UEDer
+
+    +   When comparing pages written by FEer with designed pictures.
+
+## How to use ?
+
+What you need to do is just import it to your code, then it will run automatically.
+
++   local
+
+    in terminal
+
+    ```
+    $ npm install
+    $ npm run build
+    ```
+
+    in js
+
+    ```
+    import './build/index'
+    ```
+
++   npm
+
+    in terminal
+
+    ```
+    $ npm install visual-compare --save
+    ```
+
+    in js
+
+    ```
+    import 'visual-compare'
+    ```
+
++   `<script src="xxx">`
+
+    ```
+    <script src="build/visual-compare.js"></script>
+    ```
+
+## rules
+
+The input of `img src` should be an online img address, such as `https://img.alicdn.com/tps/TB1gx13PFXXXXXFXXXXXXXXXXXX-1130-500.jpg_q100.jpg_.webp`
+
+
