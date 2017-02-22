@@ -10,7 +10,7 @@ var webpackConfig = require('./webpack.config');
 gulp.task('start', function() {
 	webpack(webpackConfig, function() {
 
-		var bundlePath = path.join(__dirname, 'dist/index.js');
+		var bundlePath = path.join(__dirname, 'dist/visual-compare.js');
 
 		fs.readFile(bundlePath, function(err, buffer) {
 			var content = buffer.toString();

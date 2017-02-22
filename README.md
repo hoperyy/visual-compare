@@ -25,21 +25,14 @@ https://github.com/liuyuanyangscript/visual-compare/issues
 
 ## 如何使用
 
-您只需要引入该资源到页面上即可，它会自动运行。
+您只需要引入资源到页面上即可，它会自动运行。本目录中 `dist/visual-compare.js` 就是直接可用的资源。
 
 +   本地使用
-
-    终端
-
-    ```
-    $ npm install
-    $ npm run build
-    ```
 
     js
 
     ```
-    import './build/index'
+    import './dist/visual-compare'
     ```
 
 +   npm
@@ -53,13 +46,13 @@ https://github.com/liuyuanyangscript/visual-compare/issues
     js
 
     ```
-    import VisualCompare from 'visual-compare'
+    import 'visual-compare'
     ```
 
 +   `<script>` 引用
 
     ```
-    <script src="build/visual-compare.js"></script>
+    <script src="dist/visual-compare.js"></script>
     ```
 
 ## 规则
@@ -93,7 +86,9 @@ https://github.com/liuyuanyangscript/visual-compare/issues
 
 ## How to use ?
 
-What you need to do is just import it to your code, then it will run automatically.
+What you need to do is just import script to your code, then it will run automatically.
+
+In this directory, `dist/visual-compare.js` is a file available.
 
 +   local
 
@@ -107,7 +102,7 @@ What you need to do is just import it to your code, then it will run automatical
     in js
 
     ```
-    import './build/index'
+    import './dist/visual-compare'
     ```
 
 +   npm
@@ -127,7 +122,7 @@ What you need to do is just import it to your code, then it will run automatical
 +   `<script src="xxx">`
 
     ```
-    <script src="build/visual-compare.js"></script>
+    <script src="dist/visual-compare.js"></script>
     ```
 
 ## rules
