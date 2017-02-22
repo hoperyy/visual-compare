@@ -1,4 +1,5 @@
-Tools for Visual Compare
+=============================
+(English DOC) Tools for Visual Compare
 =============================
 
 ## github
@@ -30,7 +31,7 @@ Visual-Compare supports UMD.
 +   local
 
     in terminal
-    
+
     ```
     $ npm install
     $ npm run build
@@ -60,7 +61,7 @@ Visual-Compare supports UMD.
     new VisualCompare()
     ```
 
-+   src
++   `<script src="xxx">`
 
     in html
 
@@ -78,8 +79,8 @@ Visual-Compare supports UMD.
 
 The input of `img src` should be an online img address, such as `https://img.alicdn.com/tps/TB1gx13PFXXXXXFXXXXXXXXXXXX-1130-500.jpg_q100.jpg_.webp`
 
-
-视觉稿还原度对比工具
+=============================
+（中文文档）视觉稿还原度对比工具
 =============================
 
 ## github
@@ -142,7 +143,7 @@ Visual-Compare 支持 UMD 规范.
     new VisualCompare()
     ```
 
-+   <script> 引用
++   `<script>` 引用
 
     html
 
