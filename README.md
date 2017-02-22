@@ -30,12 +30,14 @@ Visual-Compare supports UMD.
 +   local
 
     in terminal
+    
     ```
     $ npm install
     $ npm run build
     ```
 
     in js
+
     ```
     import VisualCompare from './build/index'
 
@@ -45,6 +47,7 @@ Visual-Compare supports UMD.
 +   npm
 
     in terminal
+
     ```
     $ npm install visual-compare --save
     ```
@@ -60,18 +63,20 @@ Visual-Compare supports UMD.
 +   src
 
     in html
+
     ```
     <script src="build/visual-compare.js"></script>
     ```
 
     in js
+
     ```
     new window.VisualCompare()
     ```
 
 ## rules
 
-    The input of `img src` should be an online img address, such as `https://img.alicdn.com/tps/TB1gx13PFXXXXXFXXXXXXXXXXXX-1130-500.jpg_q100.jpg_.webp`
+The input of `img src` should be an online img address, such as `https://img.alicdn.com/tps/TB1gx13PFXXXXXFXXXXXXXXXXXX-1130-500.jpg_q100.jpg_.webp`
 
 
 视觉稿还原度对比工具
@@ -107,12 +112,14 @@ Visual-Compare 支持 UMD 规范.
 +   本地使用
 
     终端
+
     ```
     $ npm install
     $ npm run build
     ```
 
     js
+
     ```
     import VisualCompare from './build/index'
 
@@ -122,6 +129,7 @@ Visual-Compare 支持 UMD 规范.
 +   npm
 
     终端
+
     ```
     $ npm install visual-compare --save
     ```
@@ -137,11 +145,13 @@ Visual-Compare 支持 UMD 规范.
 +   <script> 引用
 
     html
+
     ```
     <script src="build/visual-compare.js"></script>
     ```
 
     js
+
     ```
     new window.VisualCompare()
     ```
