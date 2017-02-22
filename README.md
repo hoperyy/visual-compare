@@ -1,6 +1,5 @@
-=============================
-(English DOC) Tools for Visual Compare
-=============================
+
+# (English DOC) Tools for Visual Compare
 
 ## github
 https://github.com/liuyuanyangscript/visual-compare
@@ -79,9 +78,9 @@ Visual-Compare supports UMD.
 
 The input of `img src` should be an online img address, such as `https://img.alicdn.com/tps/TB1gx13PFXXXXXFXXXXXXXXXXXX-1130-500.jpg_q100.jpg_.webp`
 
-=============================
-（中文文档）视觉稿还原度对比工具
-=============================
+
+#（中文文档）视觉稿还原度对比工具
+
 
 ## github
 https://github.com/liuyuanyangscript/visual-compare
