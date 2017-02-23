@@ -86,11 +86,11 @@ $.extend(Panel.prototype, {
 
             '<div class="visual-compare-btn-area">' +
 
-            '<a href="javascript:;"' + (!this.config.showPanel ? ' style="display: none;"' : '') + ' class="visual-compare-btn btn-reset J_VisualCompare_Reset">重置</a>' +
+            '<a href="javascript:;"' + (!this.config.showPanel ? ' style="display: none;"' : '') + ' class="visual-compare-btn btn-reset J_VisualCompare_Reset">Reset</a>' +
 
-            (this.config.showImg && this.config.src ? '<a href="javascript:;"' + (!this.config.showPanel ? ' style="display: none;"' : '') + ' class="visual-compare-btn btn-img-switcher J_VisualCompare_ImgSwither">隐藏图片</a>' : '<a href="javascript:;"' + (!this.config.showPanel ? ' style="display: none;"' : '') + ' class="visual-compare-btn btn-img-switcher visual-compare-is-closed J_VisualCompare_ImgSwither">显示图片</a>') +
+            (this.config.showImg && this.config.src ? '<a href="javascript:;"' + (!this.config.showPanel ? ' style="display: none;"' : '') + ' class="visual-compare-btn btn-img-switcher J_VisualCompare_ImgSwither">Hide image</a>' : '<a href="javascript:;"' + (!this.config.showPanel ? ' style="display: none;"' : '') + ' class="visual-compare-btn btn-img-switcher visual-compare-is-closed J_VisualCompare_ImgSwither">Show image</a>') +
 
-            (this.config.showPanel ? '<a href="javascript:;" class="visual-compare-btn J_VisualCompare_PanelSwitcher">收起面板<a>' : '<a href="javascript:;" class="visual-compare-btn J_VisualCompare_PanelSwitcher visual-compare-is-closed' + '">还原度助手</a>') +
+            (this.config.showPanel ? '<a href="javascript:;" class="visual-compare-btn J_VisualCompare_PanelSwitcher">Hide panel<a>' : '<a href="javascript:;" class="visual-compare-btn J_VisualCompare_PanelSwitcher visual-compare-is-closed' + '">Visual Compare</a>') +
 
             '</div>' +
 
@@ -237,14 +237,14 @@ $.extend(Panel.prototype, {
                 self.$panelArea.show();
                 self.$container.find('.J_VisualCompare_ImgSwither').show();
                 self.$container.find('.J_VisualCompare_Reset').show();
-                $target.removeClass('visual-compare-is-closed').text('收起面板');
+                $target.removeClass('visual-compare-is-closed').text('Hide panel');
             } else {
 
                 // 展开状态
                 self.$panelArea.hide();
                 self.$container.find('.J_VisualCompare_ImgSwither').hide();
                 self.$container.find('.J_VisualCompare_Reset').hide();
-                $target.addClass('visual-compare-is-closed').text('还原度助手');
+                $target.addClass('visual-compare-is-closed').text('Visual Compare');
             }
 
         });
@@ -254,11 +254,11 @@ $.extend(Panel.prototype, {
 
             if ($target.hasClass('visual-compare-is-closed')) { // 关闭状态
                 self.$img.show();
-                $target.removeClass('visual-compare-is-closed').text('隐藏图片');
+                $target.removeClass('visual-compare-is-closed').text('Hide panel');
             } else {
                 // 展开状态
                 self.$img.hide();
-                $target.addClass('visual-compare-is-closed').text('显示图片');
+                $target.addClass('visual-compare-is-closed').text('Visual Compare');
             }
 
         });
