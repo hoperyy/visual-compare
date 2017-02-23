@@ -1,8 +1,12 @@
 var $ = require('jquery');
 var Index = require('./index/index');
 
-$(function() {
+if ($('body').length) {
     new Index();
-});
+} else {
+    $(function() {
+        new Index();
+    });
+}
 
 module.exports = Index;
