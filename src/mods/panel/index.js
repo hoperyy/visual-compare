@@ -53,33 +53,33 @@ $.extend(Panel.prototype, {
             '<div class="visual-compare-panel J_VisualComparePanel" style="z-index: ' + panelZIndex + ';">' +
 
             '<div class="visual-compare-panel-area J_VisualCompare_PanelArea"' + (!this.config.showPanel ? ' style="display: none;"' : '') + '>' +
-            '<ul>' +
-            '<li>' +
-            '<span class="label">opacity: </span><input type="text" value="' + this.config.opacity + '" class="J_VisualCompare_InputText J_VisualCompare_ValOpacity">' +
+            '<ul class="visual-compare-panel-area-ul">' +
+            '<li class="visual-compare-panel-area-li">' +
+            '<span class="visual-compare-panel-area-label">opacity: </span><input type="text" value="' + this.config.opacity + '" class="J_VisualCompare_InputText J_VisualCompare_ValOpacity visual-compare-panel-area-input">' +
             '</li>' +
-            '<li>' +
-            '<span class="label">z-index: </span><input type="text" value="' + this.config.zIndex + '" class="J_VisualCompare_InputText J_VisualCompare_ValZIndex">' +
+            '<li class="visual-compare-panel-area-li">' +
+            '<span class="visual-compare-panel-area-label">z-index: </span><input type="text" value="' + this.config.zIndex + '" class="J_VisualCompare_InputText J_VisualCompare_ValZIndex visual-compare-panel-area-input">' +
             '</li>' +
-            '<li>' +
-            '<span class="label">width: </span><input type="text" value="' + this.config.width + '" class="J_VisualCompare_InputText J_VisualCompare_ValWidth">' +
+            '<li class="visual-compare-panel-area-li">' +
+            '<span class="visual-compare-panel-area-label">width: </span><input type="text" value="' + this.config.width + '" class="J_VisualCompare_InputText J_VisualCompare_ValWidth visual-compare-panel-area-input">' +
             '</li>' +
-            '<li>' +
-            '<span class="label">height: </span><input type="text" value="' + this.config.height + '" class="J_VisualCompare_InputText J_VisualCompare_ValHeight">' +
+            '<li class="visual-compare-panel-area-li">' +
+            '<span class="visual-compare-panel-area-label">height: </span><input type="text" value="' + this.config.height + '" class="J_VisualCompare_InputText J_VisualCompare_ValHeight visual-compare-panel-area-input">' +
             '</li>' +
-            '<li>' +
-            '<span class="label">left: </span><input type="text" value="' + this.config.left + '" class="J_VisualCompare_InputText J_VisualCompare_ValLeft">' +
+            '<li class="visual-compare-panel-area-li">' +
+            '<span class="visual-compare-panel-area-label">left: </span><input type="text" value="' + this.config.left + '" class="J_VisualCompare_InputText J_VisualCompare_ValLeft visual-compare-panel-area-input">' +
             '</li>' +
-            '<li>' +
-            '<span class="label">top: </span><input type="text" value="' + this.config.top + '" class="J_VisualCompare_InputText J_VisualCompare_ValTop">' +
+            '<li class="visual-compare-panel-area-li">' +
+            '<span class="visual-compare-panel-area-label">top: </span><input type="text" value="' + this.config.top + '" class="J_VisualCompare_InputText J_VisualCompare_ValTop visual-compare-panel-area-input">' +
             '</li>' +
-            '<li>' +
-            '<span class="label">img src: </span><input type="text"' + (this.config.src ? 'value=' + this.config.src : '') + ' class="J_VisualCompare_InputText J_VisualCompare_ValPic">' +
+            '<li class="visual-compare-panel-area-li">' +
+            '<span class="visual-compare-panel-area-label">img src: </span><input type="text"' + (this.config.src ? 'value=' + this.config.src : '') + ' class="J_VisualCompare_InputText J_VisualCompare_ValPic visual-compare-panel-area-input">' +
             '</li>' +
-            '<li>' +
-            '<span class="label">img border: </span><span class="checkbox J_VisualCompare_InputCheckbox J_VisualCompare_ValBorder' + (this.config.showBorder ? ' checked' : '') +'"></span>' +
+            '<li class="visual-compare-panel-area-li">' +
+            '<span class="visual-compare-panel-area-label">img border: </span><span class="visual-compare-panel-area-checkbox J_VisualCompare_InputCheckbox J_VisualCompare_ValBorder' + (this.config.showBorder ? ' visual-compare-panel-area-checked' : '') +'"></span>' +
             '</li>' +
-            '<li>' +
-            '<span class="label">crossline: </span><span class="checkbox J_VisualCompare_InputCheckbox J_VisualCompare_ValCrossLine' + (this.config.showCrossLine ? ' checked' : '') +'"></span>' +
+            '<li class="visual-compare-panel-area-li">' +
+            '<span class="visual-compare-panel-area-label">cross line: </span><span class="visual-compare-panel-area-checkbox J_VisualCompare_InputCheckbox J_VisualCompare_ValCrossLine' + (this.config.showCrossLine ? ' visual-compare-panel-area-checked' : '') +'"></span>' +
             '</li>' +
             '</ul>' +
             '</div>' +
@@ -132,8 +132,8 @@ $.extend(Panel.prototype, {
             zIndex: $('.J_VisualCompare_ValZIndex', this.$container).val(),
             left: $('.J_VisualCompare_ValLeft', this.$container).val(),
             top: $('.J_VisualCompare_ValTop', this.$container).val(),
-            showBorder: $('.J_VisualCompare_ValBorder', this.$container).hasClass('checked'),
-            showCrossLine: $('.J_VisualCompare_ValCrossLine', this.$container).hasClass('checked'),
+            showBorder: $('.J_VisualCompare_ValBorder', this.$container).hasClass('visual-compare-panel-area-checked'),
+            showCrossLine: $('.J_VisualCompare_ValCrossLine', this.$container).hasClass('visual-compare-panel-area-checked'),
             showImg: !$('.J_VisualCompare_ImgSwither', this.$container).hasClass('visual-compare-is-closed'),
             showPanel: !$('.J_VisualCompare_PanelSwitcher', this.$container).hasClass('visual-compare-is-closed'),
             src: $('.J_VisualCompare_ValPic', this.$container).val()
@@ -184,8 +184,8 @@ $.extend(Panel.prototype, {
         $('.J_VisualCompare_ValZIndex', this.$container).val(1);
         $('.J_VisualCompare_ValLeft', this.$container).val(0);
         $('.J_VisualCompare_ValTop', this.$container).val(0);
-        $('.J_VisualCompare_ValBorder', this.$container).removeClass('checked');
-        $('.J_VisualCompare_ValCrossLine', this.$container).removeClass('checked');
+        $('.J_VisualCompare_ValBorder', this.$container).removeClass('visual-compare-panel-area-checked');
+        $('.J_VisualCompare_ValCrossLine', this.$container).removeClass('visual-compare-panel-area-checked');
 
         this.updateStyleByPanel();
 
@@ -205,10 +205,10 @@ $.extend(Panel.prototype, {
         this.$container.find('.J_VisualCompare_InputCheckbox').on('touchstart click', function(ev) {
             ev.preventDefault();
             var $target = $(this);
-            if ($target.hasClass('checked')) {
-                $target.removeClass('checked');
+            if ($target.hasClass('visual-compare-panel-area-checked')) {
+                $target.removeClass('visual-compare-panel-area-checked');
             } else {
-                $target.addClass('checked');
+                $target.addClass('visual-compare-panel-area-checked');
             }
 
             self.updateStyleByPanel();
