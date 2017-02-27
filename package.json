@@ -1,7 +1,7 @@
 {
   "name": "visual-compare",
-  "version": "1.0.16",
-  "description": "visual compare helper / 视觉还原度对比工具",
+  "version": "1.0.17",
+  "description": "visual compare helper",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
