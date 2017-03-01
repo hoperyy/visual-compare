@@ -73,7 +73,10 @@ $.extend(Panel.prototype, {
             '<span class="visual-compare-panel-area-label">top: </span><input type="text" value="' + this.config.top + '" class="J_VisualCompare_InputText J_VisualCompare_ValTop visual-compare-panel-area-input">' +
             '</li>' +
             '<li class="visual-compare-panel-area-li">' +
-            '<span class="visual-compare-panel-area-label">img src: </span><input type="text"' + (this.config.src ? 'value=' + this.config.src : '') + ' class="J_VisualCompare_InputText J_VisualCompare_ValPic visual-compare-panel-area-input">' +
+            '<span class="visual-compare-panel-area-label">online img: </span><input type="text"' + (this.config.src ? 'value=' + this.config.src : '') + ' class="J_VisualCompare_InputText J_VisualCompare_ValPic visual-compare-panel-area-input">' +
+            '</li>' +
+            '<li class="visual-compare-panel-area-li">' +
+            '<span class="visual-compare-panel-area-label">local img: </span><input type="file" class="J_VisualCompare_ValFile visual-compare-panel-area-input-file">' +
             '</li>' +
             '<li class="visual-compare-panel-area-li">' +
             '<span class="visual-compare-panel-area-label">img border: </span><span class="visual-compare-panel-area-checkbox J_VisualCompare_InputCheckbox J_VisualCompare_ValBorder' + (this.config.showBorder ? ' visual-compare-panel-area-checked' : '') +'"></span>' +
@@ -227,41 +230,62 @@ $.extend(Panel.prototype, {
 
         });
 
-        this.$container.find('.J_VisualCompare_Reset').on('click touchstart', function() {
-            self.resetPanel();
-        });
+        this.$container.find('.J_VisualCompare_ValFile').on('change', function(e){
 
-        this.$container.find('.J_VisualCompare_PanelSwitcher').on('click touchstart', function(ev) {
-            var $target = $(ev.currentTarget);
-            if ($target.hasClass('visual-compare-is-closed')) { // 关闭状态
-                self.$panelArea.show();
-                self.$container.find('.J_VisualCompare_ImgSwither').show();
-                self.$container.find('.J_VisualCompare_Reset').show();
-                $target.removeClass('visual-compare-is-closed').text('Hide panel');
-            } else {
+        var file = e.target.files[0]; //获取图片资源
 
-                // 展开状态
-                self.$panelArea.hide();
-                self.$container.find('.J_VisualCompare_ImgSwither').hide();
-                self.$container.find('.J_VisualCompare_Reset').hide();
-                $target.addClass('visual-compare-is-closed').text('Visual Compare');
-            }
+        // 只选择图片文件
+        if (!file.type.match('image.*')) {
+          return false;
+        }
 
-        });
+        var reader = new FileReader();
 
-        this.$container.find('.J_VisualCompare_ImgSwither').on('click touchstart', function(ev) {
-            var $target = $(ev.currentTarget);
+        reader.readAsDataURL(file); // 读取文件
 
-            if ($target.hasClass('visual-compare-is-closed')) { // 关闭状态
-                self.$img.show();
-                $target.removeClass('visual-compare-is-closed').text('Hide panel');
-            } else {
-                // 展开状态
-                self.$img.hide();
-                $target.addClass('visual-compare-is-closed').text('Visual Compare');
-            }
+        // 渲染文件
+        reader.onload = function(arg) {
+            self.$container.find('.J_VisualCompare_ValPic').val(arg.target.result);
+            self.$img.attr('src', arg.target.result);
+        }
 
-        });
+      });
+
+      this.$container.find('.J_VisualCompare_Reset').on('click touchstart', function() {
+        self.resetPanel();
+      });
+
+      this.$container.find('.J_VisualCompare_PanelSwitcher').on('click touchstart', function(ev) {
+        var $target = $(ev.currentTarget);
+        if ($target.hasClass('visual-compare-is-closed')) { // 关闭状态
+          self.$panelArea.show();
+          self.$container.find('.J_VisualCompare_ImgSwither').show();
+          self.$container.find('.J_VisualCompare_Reset').show();
+          $target.removeClass('visual-compare-is-closed').text('Hide panel');
+        } else {
+
+          // 展开状态
+          self.$panelArea.hide();
+          self.$container.find('.J_VisualCompare_ImgSwither').hide();
+          self.$container.find('.J_VisualCompare_Reset').hide();
+          $target.addClass('visual-compare-is-closed').text('Visual Compare');
+        }
+
+      });
+
+      this.$container.find('.J_VisualCompare_ImgSwither').on('click touchstart', function(ev) {
+        var $target = $(ev.currentTarget);
+
+        if ($target.hasClass('visual-compare-is-closed')) { // 关闭状态
+          self.$img.show();
+          $target.removeClass('visual-compare-is-closed').text('Hide image');
+        } else {
+          // 展开状态
+          self.$img.hide();
+          $target.addClass('visual-compare-is-closed').text('Show image');
+        }
+
+      });
 
         // 刷新页面时存储配置到 localstorage
         this._windowOnloadHandler = function() {

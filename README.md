@@ -28,7 +28,7 @@ What you need to do is just import script to your code, then it will run automat
 
 In this directory, `dist/visual-compare.js` is a file available.
 
-+   local
++   js
 
     in terminal
 
@@ -57,14 +57,9 @@ In this directory, `dist/visual-compare.js` is a file available.
     import 'visual-compare'
     ```
 
-+   `<script src="xxx">`
++   in html
 
     ```
     <script src="dist/visual-compare.js"></script>
     ```
-
-## rules
-
-The input of `img src` should be an online img address, such as `https://img.alicdn.com/tps/TB1gx13PFXXXXXFXXXXXXXXXXXX-1130-500.jpg_q100.jpg_.webp`
-
 

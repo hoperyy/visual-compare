@@ -1,8 +1,8 @@
 {
   "name": "visual-compare",
-  "version": "1.0.17",
+  "version": "1.0.21",
   "description": "visual compare helper",
-  "main": "build/index.js",
+  "main": "./dist/visual-compare.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp --gulpfile gulpfile.js start"
