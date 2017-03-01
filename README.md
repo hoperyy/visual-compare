@@ -28,33 +28,14 @@ What you need to do is just import script to your code, then it will run automat
 
 In this directory, `dist/visual-compare.js` is a file available.
 
-+   js
-
-    in terminal
-
-    ```
-    $ npm install
-    $ npm run build
-    ```
-
-    in js
-
-    ```
-    import './dist/visual-compare'
-    ```
-
 +   npm
-
-    in terminal
 
     ```
     $ npm install visual-compare --save
     ```
 
-    in js
-
     ```
-    import 'visual-compare'
+    require('visual-compare')
     ```
 
 +   in html

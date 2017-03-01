@@ -1,6 +1,6 @@
 {
   "name": "visual-compare",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "visual compare helper",
   "main": "./dist/visual-compare.js",
   "scripts": {
