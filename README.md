@@ -41,6 +41,10 @@ In this directory, `dist/visual-compare.js` is a file available.
 +   in html
 
     ```
-    <script src="dist/visual-compare.js"></script>
+    $ cd /visual-compare && npm install && npm run build
+    ```
+
+    ```
+    <script src="./dist/visual-compare.js"></script>
     ```
 
