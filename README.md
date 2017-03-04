@@ -6,6 +6,10 @@ https://github.com/liuyuanyangscript/visual-compare
 ## issues
 https://github.com/liuyuanyangscript/visual-compare/issues
 
+## Which browser can use?
+
++   Chrome
+
 ## Who is using ?
 
 +   Front-End engineer
