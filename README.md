@@ -28,27 +28,33 @@ https://github.com/liuyuanyangscript/visual-compare/issues
 
 ## How to use ?
 
-What you need to do is just import script to your code, then it will run automatically.
++   Chrome Plugin
 
-In this directory, `dist/visual-compare.js` is a file available.
+    We have an chrome plugin: [get plugin](https://chrome.google.com/webstore/detail/visual-compare/nnadnepmpjjpcbeegdbgaedmcalghdgg?hl=zh-CN)
 
-+   npm
++   Insert Code
 
-    ```
-    $ npm install visual-compare --save
-    ```
+    What you need to do is just import script to your code, then it will run automatically.
 
-    ```
-    require('visual-compare')
-    ```
+    In this directory, `dist/visual-compare.js` is a file available.
 
-+   in html
+    +   npm
 
-    ```
-    $ cd /visual-compare && npm install && npm run build
-    ```
+        ```
+        $ npm install visual-compare --save
+        ```
 
-    ```
-    <script src="./dist/visual-compare.js"></script>
-    ```
+        ```
+        require('visual-compare')
+        ```
+
+    +   in html
+
+        ```
+        $ cd /visual-compare && npm install && npm run build
+        ```
+
+        ```
+        <script src="./dist/visual-compare.js"></script>
+        ```
 
