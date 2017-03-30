@@ -1,6 +1,6 @@
 # Tools for Visual Compare
 
-## github
+## github(If you like it, star please :))
 https://github.com/liuyuanyangscript/visual-compare
 
 ## issues
