@@ -16,10 +16,6 @@
 
   function Drag() {}
 
-  setTimeout(() => {
-    console.log('visal 运行在浏览器2：', console.v, document);
-  }, 5000);
-
   $.extend(Drag.prototype, {
     init: function($target) {
 
