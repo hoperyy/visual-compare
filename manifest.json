@@ -4,22 +4,22 @@
     "manifest_version": 2,
     "description": "Visual Compare for FEer and UEDer",
     "icons": {
-        "16": "static/img/compare-16.png",
-        "32": "static/img/compare-32.png",
-        "48": "static/img/compare-48.png",
-        "128": "static/img/compare-128.png"
+        "16": "img/compare-16.png",
+        "32": "img/compare-32.png",
+        "48": "img/compare-48.png",
+        "128": "img/compare-128.png"
     },
 
     "browser_action": {
-        "default_icon": "static/img/compare-128.png",
+        "default_icon": "img/compare-128.png",
         "default_title": "Visual Compare",
-        "default_popup": "template/popup.html"
+        "default_popup": "popup.html"
     },
 
     "background": {
         "persistent": true,
         "scripts": [
-            "static/lib/jquery-3.1.1.min.js"
+            "jquery-3.1.1.min.js"
         ]
     },
 
@@ -34,12 +34,12 @@
     ],
 
     "web_accessible_resources": [
-        "static/img/compare-src.png",
-        "static/img/compare-16.png",
-        "static/img/compare-32.png",
-        "static/img/compare-48.png",
-        "static/img/compare-128.png",
-        "static/css/mod/visual-compare.css"
+        "img/compare-src.png",
+        "img/compare-16.png",
+        "img/compare-32.png",
+        "img/compare-48.png",
+        "img/compare-128.png",
+        "mod/visual-compare/index.css"
     ],
 
     "content_scripts": [
@@ -50,11 +50,9 @@
                 "file://*/*"
             ],
             "js": [
-                "static/lib/jquery-3.1.1.min.js",
-
-                "static/js/core/util.js",
-
-                "static/js/mod/visual-compare.js"
+                "jquery-3.1.1.min.js",
+                "common/util.js",
+                "mod/visual-compare/index.js"
             ],
             "run_at": "document_end",
             "all_frames": false

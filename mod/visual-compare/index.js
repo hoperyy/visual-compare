@@ -16,6 +16,10 @@
 
   function Drag() {}
 
+  setTimeout(() => {
+    console.log('visal 运行在浏览器2：', console.v, document);
+  }, 5000);
+
   $.extend(Drag.prototype, {
     init: function($target) {
 
@@ -746,7 +750,7 @@
   $.extend(VisualCompare.prototype, {
 
     init: function() {
-      myUtil.addCss(chrome.extension.getURL('static/css/mod/visual-compare.css'), 'visual-compare-css');
+      myUtil.addCss(chrome.extension.getURL('mod/visual-compare/index.css'), 'visual-compare-css');
 
       this.img = new Img(this.config);
       this.crossLine = new CrossLine(this.config);
